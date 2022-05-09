@@ -1,0 +1,234 @@
+{ "visual": {
+    "color": "green",
+    "words": [
+      "upwards",
+      "horizontal",
+      "inch",
+      "diameter",
+      "maximum",
+      "evenly",
+      "vertical",
+      "surface",
+      "length",
+      "meters",
+      "mm",
+      "pole",
+      "trailing",
+      "edges",
+      "beam",
+      "blades",
+      "holes",
+      "depending",
+      "leather",
+      "cloth",
+      "evenly",
+      "worn",
+      "plastic",
+      "inches",
+      "coat",
+      "wool",
+      "jeans",
+      "clothing"
+    ]
+  },
+  "tactile": {
+    "color": "cyan",
+    "words": [
+      "thick",
+      "thinner",
+      "penetrate",
+      "grip",
+      "flame",
+      "thicker",
+      "spinning",
+      "touch",
+      "melt",
+      "melting",
+      "melted",
+      "thin"
+    ]
+  },
+  "outdoor": {
+    "color": "blue",
+    "words": [
+      "sun",
+      "windy",
+      "grass",
+      "rain",
+      "snow",
+      "hail",
+      "forest",
+      "plains",
+      "hill",
+      "mountain",
+      "atmosphere"
+    ]
+  },
+  "number": {
+    "color": "dark_green",
+    "words": [
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+      "nine",
+      "ten",
+      "eleven",
+      "twelve",
+      "thirteen",
+      "fourteen",
+      "fifteen",
+      "sixteen",
+      "seventeen",
+      "eighteen",
+      "nineteen",
+      "twenty",
+      "thirty",
+      "fourty",
+      "fifty",
+      "sixty",
+      "seventy",
+      "eighty",
+      "ninety",
+      "hundred",
+      "thousand",
+      "million",
+      "quarter",
+      "third"
+    ]
+  },
+  "place": {
+    "color": "brown",
+    "words": [
+      "residence",
+      "motel",
+      "post office",
+      "apartment",
+      "house",
+      "bank",
+      "cafe",
+      "police station",
+      "restaurant"
+    ]
+  },
+  "bodypart": {
+    "color": "yellow",
+    "words": [
+      "finger",
+      "leg",
+      "elbow",
+      "arm",
+      "knuckle",
+      "foot",
+      "feet",
+      "face",
+      "eyes",
+      "nose",
+      "mouth",
+      "ears",
+      "hair",
+      "scalp",
+      "head",
+      "toes",
+      "hand"
+    ]
+  },
+  "violence": {
+    "color": "pink",
+    "words": [
+      "murder",
+      "kick",
+      "assault",
+      "blood",
+      "wound",
+      "guilty",
+      "confession",
+      "evidence",
+      "manslaughter",
+      "punch"
+    ]
+  },
+  "person": {
+    "color": "orange",
+    "words": [
+      "teenager",
+      "child",
+      "man",
+      "woman",
+      "boy",
+      "girl",
+      "person",
+      "people",
+      "adult"
+    ]
+  },
+  "mental": {
+    "color": "purple",
+    "words": [
+      "psychology",
+      "philosophy",
+      "understanding",
+      "thoughts",
+      "describe",
+      "profound",
+      "consciousness",
+      "reading",
+      "notions",
+      "contemplation"
+    ]
+  },
+  "time": {
+    "color": "burgundy",
+    "words": [
+      "day",
+      "week",
+      "hour",
+      "second",
+      "year",
+      "century",
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "weekend",
+      "weekday",
+      "saturday",
+      "sunday",
+      "twice",
+      "date",
+      "wait",
+      "count",
+      "month"
+    ]
+  },
+  "social": {
+    "color": "red",
+    "words": [
+      "marriage",
+      "marry",
+      "remarried",
+      "husband",
+      "father",
+      "aunt",
+      "sister",
+      "wife",
+      "lived",
+      "brother",
+      "died",
+      "son",
+      "refused",
+      "daughter",
+      "friend",
+      "mother",
+      "family",
+      "spouse",
+      "parent",
+      "moved"
+    ]
+  }
+}
