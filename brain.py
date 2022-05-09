@@ -1,5 +1,5 @@
 import json
-
+import speech_recognition as sr
 
 database = json.load(open("dictionary.json"))
 
@@ -17,5 +17,9 @@ def show_region(category):
 
 
 if __name__ == "__main__":
-    word = input()
+    rec = sr.Recognizer()
+    wav_file = "family.wav"
+    with sr.AudioFile(wav_file) as src:
+        audio = rec.listen(src)
+        word = rec.recognize_google(audio)
     show_region(get_category(word))
