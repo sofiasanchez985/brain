@@ -1,6 +1,6 @@
 {
     "bodypart": {
-        "color": "yellow",
+        "bool": "false",
         "words": [
             "finger",
             "leg",
@@ -23,7 +23,7 @@
         ]
     },
     "mental": {
-        "color": "purple",
+        "bool": "false",
         "words": [
             "cognition",
             "psychology",
@@ -39,7 +39,7 @@
         ]
     },
     "number": {
-        "color": "dark_green",
+        "bool": "false",
         "words": [
             "one",
             "two",
@@ -76,7 +76,7 @@
         ]
     },
     "outdoor": {
-        "color": "blue",
+        "bool": "false",
         "words": [
             "kayak",
             "rock",
@@ -99,7 +99,7 @@
         ]
     },
     "person": {
-        "color": "orange",
+        "bool": "false",
         "words": [
             "teenager",
             "child",
@@ -113,7 +113,7 @@
         ]
     },
     "place": {
-        "color": "brown",
+        "bool": "false",
         "words": [
             "paris",
             "library",
@@ -130,7 +130,7 @@
         ]
     },
     "social": {
-        "color": "red",
+        "bool": true,
         "words": [
             "greetings",
             "hello",
@@ -157,7 +157,7 @@
         ]
     },
     "tactile": {
-        "color": "cyan",
+        "bool": "false",
         "words": [
             "thick",
             "vibration",
@@ -176,7 +176,7 @@
         ]
     },
     "time": {
-        "color": "burgundy",
+        "bool": "false",
         "words": [
             "day",
             "clock",
@@ -204,7 +204,7 @@
         ]
     },
     "violence": {
-        "color": "pink",
+        "bool": "false",
         "words": [
             "police",
             "murder",
@@ -220,7 +220,7 @@
         ]
     },
     "visual": {
-        "color": "green",
+        "bool": "false",
         "words": [
             "dog",
             "cat",

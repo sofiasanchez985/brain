@@ -8,7 +8,13 @@ app = Flask(__name__, static_url_path='', static_folder='web/static', template_f
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', tactile=database["tactile"]["bool"],
+                           visual=database["visual"]["bool"], bodypart=database["bodypart"]["bool"],
+                           mental=database["mental"]["bool"], number=database["number"]["bool"],
+                           outdoor=database["outdoor"]["bool"], person=database["person"]["bool"],
+                           place=database["place"]["bool"], social=database["social"]["bool"],
+                           time=database["time"]["bool"], violence=database["violence"]["bool"])
+
 
 def get_category(text):
     for category in database:
@@ -25,9 +31,15 @@ def add_word(text, category):
 
 def show_region(category):
     if category in database:
-        print(category + ": " + database[category]["color"])
+        database[category]["bool"] = "true"
+        print(category)
     else:
         print("ERROR")
+
+
+def reset_bools():
+    for category in database:
+        database[category]["bool"] = "false"
 
 
 if __name__ == "__main__":
@@ -42,5 +54,6 @@ if __name__ == "__main__":
         region = input("Corresponding category not found. Enter category for " + word + ": ")
         add_word(word, region)
     show_region(region)
-    json.dump(database, open("dictionary.json", "w"), indent=4)
+    # reset_bools()
+    # json.dump(database, open("dictionary.json", "w"), indent=4)
     app.run()
