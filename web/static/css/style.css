@@ -3,13 +3,51 @@ html, body {
   width: 100%;
 }
 
-body { background-color: black; }
+body { 
+  background-color: black; 
+}
 
 h1 {
   margin-top: 50px;
-  margin-left: 70px;
   font-size: 50px;
-  color: white;
+  color: #c0c0c0;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+p {
+  font-size: 30px;
+  color: #c0c0c0;
+  font-family: Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+#header{
+  margin-left: 70px;
+}
+
+#recordingsList {
+  margin-left: 30px;
+}
+
+button {
+  height: 40px;
+  margin-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  border: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  color: #d6d6d6;
+  background-color: #008cb4;
+}
+
+a {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  color: #c0c0c0;
+  margin-right: 10px;
 }
 
 #brain-contain {
@@ -41,57 +79,57 @@ h1 {
 .person { background-color: rgb(255, 106, 0); }
 .outdoor { background-color: rgb(255, 106, 0); }
 
-.animated-tactile { animation: pulse-tactile 0.7s; }
+.animated-tactile { animation: pulse-tactile 1s; }
 @keyframes pulse-tactile {
   0% { box-shadow: 0px 0px 0px 0px rgba(0, 201, 136,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(0, 201, 136,0); }
 }
-.animated-visual { animation: pulse-visual 0.7s; }
+.animated-visual { animation: pulse-visual 1s; }
 @keyframes pulse-visual {
   0% { box-shadow: 0px 0px 0px 0px rgba(0, 201, 136,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(0, 201, 136,0); }
 }
-.animated-outdoor { animation: pulse-outdoor 0.7s; }
+.animated-outdoor { animation: pulse-outdoor 1s; }
 @keyframes pulse-outdoor {
   0% { box-shadow: 0px 0px 0px 0px rgba(255, 106, 0,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(255, 106, 0,0); }
 }
-.animated-bodypart { animation: pulse-bodypart 0.7s; }
+.animated-bodypart { animation: pulse-bodypart 1s; }
 @keyframes pulse-bodypart {
   0% { box-shadow: 0px 0px 0px 0px rgba(245, 236, 0,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(245, 236, 0,0); }
 }
-.animated-number { animation: pulse-number 0.7s; }
+.animated-number { animation: pulse-number 1s; }
 @keyframes pulse-number {
   0% { box-shadow: 0px 0px 0px 0px rgba(0, 201, 136,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(0, 201, 136,0); }
 }
-.animated-place { animation: pulse-place 0.7s; }
+.animated-place { animation: pulse-place 1s; }
 @keyframes pulse-place {
   0% { box-shadow: 0px 0px 0px 0px rgba(120, 87, 0,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(120, 87, 0,0); }
 }
-.animated-violence { animation: pulse-violence 0.7s; }
+.animated-violence { animation: pulse-violence 1s; }
 @keyframes pulse-violence {
   0% { box-shadow: 0px 0px 0px 0px rgba(244, 164, 192,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(244, 164, 192,0); }
 }
-.animated-person { animation: pulse-person 0.7s; }
+.animated-person { animation: pulse-person 1s; }
 @keyframes pulse-person {
   0% { box-shadow: 0px 0px 0px 0px rgba(255, 106, 0,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(255, 106, 0,0); }
 }
-.animated-mental { animation: pulse-mental 0.7s; }
+.animated-mental { animation: pulse-mental 1s; }
 @keyframes pulse-mental {
   0% { box-shadow: 0px 0px 0px 0px rgba(153, 41, 189,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(153, 41, 189,0); }
 }
-.animated-time { animation: pulse-time 0.7s; }
+.animated-time { animation: pulse-time 1s; }
 @keyframes pulse-time {
   0% { box-shadow: 0px 0px 0px 0px rgba(181, 26, 0,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(181, 26, 0,0); }
 }
-.animated-social { animation: pulse-social 0.7s; }
+.animated-social { animation: pulse-social 1s; }
 @keyframes pulse-social {
   0% { box-shadow: 0px 0px 0px 0px rgba(244, 164, 192,1); }
   100% { box-shadow: 0px 0px 5px 200px rgba(244, 164, 192,0); }

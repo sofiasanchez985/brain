@@ -24,9 +24,10 @@
     <form method="post" enctype="multipart/form-data">
         <input type="file" name="file"/>
         <br>
-        <input type="submit" id="submitButton" value="Show"/>
+        <input type="submit" id="submitButton" value="Launch"/>
     </form>
-    <p style="color: white;">{{ transcript }}</p>
+    <p id="full">Full phrase: </p>
+    <p id="current">Current word: </p>
   </div>
   <div id="brain-contain">
     <img id="brain" src="jpg/brain-colors.jpg">
@@ -83,6 +84,13 @@
     var time = {{ time }};
     var social = {{ social }};
 
+    var cats = "{{ categories }}";
+    var categories = cats.split(',');
+    var transcript = "{{ transcript }}";
+    var transcriptList = transcript.split(" ");
+
+    document.getElementById("full").innerHTML = "Full phrase: \"" + transcript + "\"";
+
     var tactileList = document.querySelectorAll(".tactile");
     var visualList = document.querySelectorAll(".visual");
     var outdoorList = document.querySelectorAll(".outdoor");
@@ -93,73 +101,78 @@
     var mentalList = document.querySelectorAll(".mental");
     var timeList = document.querySelectorAll(".time");
     var socialList = document.querySelectorAll(".social");
-    
-    if(tactile) {
-      tactileList.forEach(function(circle) {
-        circle.classList.remove("animated-tactile");
-        circle.classList.add("animated-tactile");
-      });
-    };
-    if(visual) {
-      visualList.forEach(function(circle) {
-        circle.classList.remove("animated-visual");
-        circle.classList.add("animated-visual");
-      });
-    };
-    if(outdoor) {
-      outdoorList.forEach(function(circle) {
-        circle.classList.remove("animated-outdoor");
-        circle.classList.add("animated-outdoor");
-      });
-    };
-    if(bodypart) {
-      bodypartList.forEach(function(circle) {
-        circle.classList.remove("animated-bodypart");
-        circle.classList.add("animated-bodypart");
-      });
-    };
-    if(number) {
-      numberList.forEach(function(circle) {
-        circle.classList.remove("animated-number");
-        circle.classList.add("animated-number");
-      });
-    };
-    if(place) {
-      placeList.forEach(function(circle) {
-        circle.classList.remove("animated-place");
-        circle.classList.add("animated-place");
-      });
-    };
-    if(violence) {
-      violenceList.forEach(function(circle) {
-        circle.classList.remove("animated-violence");
-        circle.classList.add("animated-violence");
-      });
-    };
-    if(person) {
-      personList.forEach(function(circle) {
-        circle.classList.remove("animated-person");
-        circle.classList.add("animated-person");
-      });
-    };
-    if(mental) {
-      mentalList.forEach(function(circle) {
-        circle.classList.remove("animated-mental");
-        circle.classList.add("animated-mental");
-      });
-    };
-    if(time) {
-      timeList.forEach(function(circle) {
-        circle.classList.remove("animated-time");
-        circle.classList.add("animated-time");
-      });
-    };
-    if(social) {
-      socialList.forEach(function(circle) {
-        circle.classList.remove("animated-social");
-        circle.classList.add("animated-social");
-      });
-    };
+
+    categories.forEach(function(word, i) {
+      setTimeout(function() {
+      document.getElementById("current").innerHTML = "Current word: \"" + transcriptList[i] + "\" (" + word + ")";
+        if(word == "tactile") {
+          tactileList.forEach(function(circle) {
+            circle.classList.remove("animated-tactile");
+            circle.classList.add("animated-tactile");
+          });
+        };
+        if(word == "visual") {
+          visualList.forEach(function(circle) {
+            circle.classList.remove("animated-visual");
+            circle.classList.add("animated-visual");
+          });
+        };
+        if(word == "outdoor") {
+          outdoorList.forEach(function(circle) {
+            circle.classList.remove("animated-outdoor");
+            circle.classList.add("animated-outdoor");
+          });
+        };
+        if(word == "bodypart") {
+          bodypartList.forEach(function(circle) {
+            circle.classList.remove("animated-bodypart");
+            circle.classList.add("animated-bodypart");
+          });
+        };
+        if(word == "number") {
+          numberList.forEach(function(circle) {
+            circle.classList.remove("animated-number");
+            circle.classList.add("animated-number");
+          });
+        };
+        if(word == "place") {
+          placeList.forEach(function(circle) {
+            circle.classList.remove("animated-place");
+            circle.classList.add("animated-place");
+          });
+        };
+        if(word == "violence") {
+          violenceList.forEach(function(circle) {
+            circle.classList.remove("animated-violence");
+            circle.classList.add("animated-violence");
+          });
+        };
+        if(word == "person") {
+          personList.forEach(function(circle) {
+            circle.classList.remove("animated-person");
+            circle.classList.add("animated-person");
+          });
+        };
+        if(word == "mental") {
+          mentalList.forEach(function(circle) {
+            circle.classList.remove("animated-mental");
+            circle.classList.add("animated-mental");
+          });
+        };
+        if(word == "time") {
+          timeList.forEach(function(circle) {
+            circle.classList.remove("animated-time");
+            circle.classList.add("animated-time");
+          });
+        };
+        if(word == "social") {
+          socialList.forEach(function(circle) {
+            circle.classList.remove("animated-social");
+            circle.classList.add("animated-social");
+          });
+        };
+      }, (i+1) * 1000);
+    });
   </script>
   <script src="js/recorder.js"></script>
   <script src="js/app.js"></script>

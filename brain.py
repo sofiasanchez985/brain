@@ -10,6 +10,7 @@ app = Flask(__name__, static_url_path='', static_folder='web/static', template_f
 def index():
     word = ""
     cats = []
+    catsstr = ""
     reset_bools()
     if request.method == "POST":
         print("SUCCESS")
@@ -29,15 +30,19 @@ def index():
                 region = get_category(w)
                 show_region(region)
                 cats.append(region)
-            print(cats)
+            for cat in cats:
+                if cat == cats[0]:
+                    catsstr = cat
+                else:
+                    catsstr += ',' + cat
 
-    return render_template('index.html', tactile=database["tactile"]["bool"],
+    return render_template('index.html', transcript=word, tactile=database["tactile"]["bool"],
                            visual=database["visual"]["bool"], bodypart=database["bodypart"]["bool"],
                            mental=database["mental"]["bool"], number=database["number"]["bool"],
                            outdoor=database["outdoor"]["bool"], person=database["person"]["bool"],
                            place=database["place"]["bool"], social=database["social"]["bool"],
                            time=database["time"]["bool"], violence=database["violence"]["bool"],
-                           transcript=word, categories=cats)
+                           categories=catsstr)
 
 
 def get_category(text):
