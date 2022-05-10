@@ -18,12 +18,14 @@
             "scalp",
             "head",
             "toes",
+            "appendage",
             "hand"
         ]
     },
     "mental": {
         "color": "purple",
         "words": [
+            "cognition",
             "psychology",
             "philosophy",
             "understanding",
@@ -76,6 +78,13 @@
     "outdoor": {
         "color": "blue",
         "words": [
+            "kayak",
+            "rock",
+            "climbing",
+            "flower",
+            "nature",
+            "natural",
+            "park",
             "sun",
             "windy",
             "grass",
@@ -106,6 +115,9 @@
     "place": {
         "color": "brown",
         "words": [
+            "paris",
+            "library",
+            "earth",
             "residence",
             "motel",
             "post office",
@@ -120,6 +132,8 @@
     "social": {
         "color": "red",
         "words": [
+            "greetings",
+            "hello",
             "marriage",
             "marry",
             "remarried",
@@ -146,6 +160,8 @@
         "color": "cyan",
         "words": [
             "thick",
+            "vibration",
+            "vibrate",
             "thinner",
             "penetrate",
             "grip",
@@ -163,6 +179,7 @@
         "color": "burgundy",
         "words": [
             "day",
+            "clock",
             "week",
             "hour",
             "second",
@@ -181,12 +198,15 @@
             "date",
             "wait",
             "count",
+            "tick",
+            "tock",
             "month"
         ]
     },
     "violence": {
         "color": "pink",
         "words": [
+            "police",
             "murder",
             "kick",
             "assault",
@@ -202,6 +222,21 @@
     "visual": {
         "color": "green",
         "words": [
+            "dog",
+            "cat",
+            "red",
+            "orange",
+            "yellow",
+            "green",
+            "blue",
+            "purple",
+            "violet",
+            "black",
+            "white",
+            "burgundy",
+            "indigo",
+            "pink",
+            "brown",
             "upwards",
             "horizontal",
             "inch",

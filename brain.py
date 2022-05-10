@@ -32,7 +32,7 @@ def show_region(category):
 
 if __name__ == "__main__":
     rec = sr.Recognizer()
-    wav_file = "family.wav"
+    wav_file = "hello.wav"
     with sr.AudioFile(wav_file) as src:
         audio = rec.listen(src)
         word = rec.recognize_google(audio)
