@@ -130,7 +130,7 @@
         ]
     },
     "social": {
-        "bool": true,
+        "bool": "false",
         "words": [
             "greetings",
             "hello",

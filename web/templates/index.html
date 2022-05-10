@@ -20,6 +20,13 @@
   	<p><strong>Recordings:</strong></p>
   	<ol id="recordingsList"></ol>
   </div>
+  <div id="speechContainer">
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"/>
+        <br>
+        <input type="submit" id="submitButton" value="Show"/>
+    </form>
+  </div>
   <div id="brain-contain">
     <img id="brain" src="jpg/brain-colors.jpg">
     <div class="circle c1 numeric tactile"></div>
@@ -153,8 +160,8 @@
       });
     };
   </script>
-  <script src="recorder.js"></script>
-  <script src="app.js"></script>
+  <script src="js/recorder.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -6,14 +6,37 @@ database = json.load(open("dictionary.json"))
 app = Flask(__name__, static_url_path='', static_folder='web/static', template_folder='web/templates')
 
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def index():
+    word = ""
+    if request.method == "POST":
+        print("SUCCESS")
+        if "file" not in request.files:
+            return redirect(request.url)
+
+        file = request.files["file"]
+        if file.filename == "":
+            return redirect(request.url)
+
+        if file:
+            rec = sr.Recognizer()
+            with sr.AudioFile(file) as src:
+                audio = rec.listen(src)
+                word = rec.recognize_google(audio)
+            region = get_category(word)
+            if region == "Not Found":
+                # select new region for word
+                region = input("Corresponding category not found. Enter category for " + word + ": ")
+                add_word(word, region)
+            show_region(region)
+
     return render_template('index.html', tactile=database["tactile"]["bool"],
                            visual=database["visual"]["bool"], bodypart=database["bodypart"]["bool"],
                            mental=database["mental"]["bool"], number=database["number"]["bool"],
                            outdoor=database["outdoor"]["bool"], person=database["person"]["bool"],
                            place=database["place"]["bool"], social=database["social"]["bool"],
-                           time=database["time"]["bool"], violence=database["violence"]["bool"])
+                           time=database["time"]["bool"], violence=database["violence"]["bool"],
+                           transcript=word)
 
 
 def get_category(text):
@@ -43,17 +66,6 @@ def reset_bools():
 
 
 if __name__ == "__main__":
-    rec = sr.Recognizer()
-    wav_file = "hello.wav"
-    with sr.AudioFile(wav_file) as src:
-        audio = rec.listen(src)
-        word = rec.recognize_google(audio)
-    region = get_category(word)
-    if region == "Not Found":
-        # select new region for word
-        region = input("Corresponding category not found. Enter category for " + word + ": ")
-        add_word(word, region)
-    show_region(region)
     # reset_bools()
     # json.dump(database, open("dictionary.json", "w"), indent=4)
     app.run()
