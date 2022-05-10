@@ -9,6 +9,8 @@ app = Flask(__name__, static_url_path='', static_folder='web/static', template_f
 @app.route('/', methods=["GET", "POST"])
 def index():
     word = ""
+    cats = []
+    reset_bools()
     if request.method == "POST":
         print("SUCCESS")
         if "file" not in request.files:
@@ -23,12 +25,11 @@ def index():
             with sr.AudioFile(file) as src:
                 audio = rec.listen(src)
                 word = rec.recognize_google(audio)
-            region = get_category(word)
-            if region == "Not Found":
-                # select new region for word
-                region = input("Corresponding category not found. Enter category for " + word + ": ")
-                add_word(word, region)
-            show_region(region)
+            for w in word.split(' '):
+                region = get_category(w)
+                show_region(region)
+                cats.append(region)
+            print(cats)
 
     return render_template('index.html', tactile=database["tactile"]["bool"],
                            visual=database["visual"]["bool"], bodypart=database["bodypart"]["bool"],
@@ -36,7 +37,7 @@ def index():
                            outdoor=database["outdoor"]["bool"], person=database["person"]["bool"],
                            place=database["place"]["bool"], social=database["social"]["bool"],
                            time=database["time"]["bool"], violence=database["violence"]["bool"],
-                           transcript=word)
+                           transcript=word, categories=cats)
 
 
 def get_category(text):
