@@ -1,8 +1,14 @@
 import json
 import speech_recognition as sr
+from flask import *
 
 database = json.load(open("dictionary.json"))
+app = Flask(__name__, static_url_path='', static_folder='web/static', template_folder='web/templates')
 
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 def get_category(text):
     for category in database:
@@ -37,3 +43,4 @@ if __name__ == "__main__":
         add_word(word, region)
     show_region(region)
     json.dump(database, open("dictionary.json", "w"), indent=4)
+    app.run()
